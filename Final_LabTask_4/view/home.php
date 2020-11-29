@@ -10,7 +10,7 @@
 	<hr/>
 
 </head>
-<body >s
+<body >
 	<center>
 		<form method="POST" action="/SimpleBanking/controller/actionWithdraw.php">
 			<label>Email: </label>
@@ -21,10 +21,9 @@
 			<br>
 			<br>
 			<label>Withdraw amount: </label>
-			<input type="text" name="balanceUpdate">
-			<input type="submit" name="withdraw" value="Withdraw">
-			
-
+			<input type="text" name = "debit">
+			<input type="submit" name="amount">
+			<br><br>
 			<hr>
 		</form>
 		

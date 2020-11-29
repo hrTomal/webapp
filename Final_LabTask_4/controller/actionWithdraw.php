@@ -8,10 +8,12 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $amount = $_POST['withdraw'];
+    $email = $_SESSION['email'];
+    $password = $_SESSION['password'];
+    $amount = $_POST['debit'];
+
     echo $amount;
+    echo " ";
 
     $conn = new mysqli("localhost", "root", "", "logindb");
 
@@ -19,8 +21,6 @@
         die("Connection Failure");
       }
       else {
-        echo "Connection Successful";
-
         $sql = "Select * FROM login WHERE email = '$email' and pass = '$password'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
@@ -28,16 +28,17 @@
         if($row['acc'] >= $amount ){
           $new_balance = $row['acc'] - $amount;
 
-          $sq = "UPDATE login set acc = 'new_balance' where email='row['email']'";
+          $sql = "UPDATE login SET acc = '$new_balance' WHERE email = '$email'";
+          $result = mysqli_query($conn,$sql);
+          $_SESSION['acc'] = $new_balance;
 
-          //$sql = "UPDATE login SET acc= $new_balance WHERE email= $row['email']";
-          $result = mysqli_query($conn,$sq);
-          $row = mysqli_fetch_array($result);
+          echo "Withdrawn";
 
+          header("Refresh:1;url='../view/home.php'");
         }
         else{
           echo "<br>";
-          echo "Insufficietn amount";
+          echo "Insufficient amount";
         }
 
       }
