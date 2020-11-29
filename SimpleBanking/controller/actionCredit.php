@@ -10,10 +10,7 @@
 
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
-    $amount = $_POST['debit'];
-
-    echo $amount;
-    echo " ";
+    $amount = $_POST['credit'];
 
     $conn = new mysqli("localhost", "root", "", "logindb");
 
@@ -25,20 +22,20 @@
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
 
-        if($row['acc'] >= $amount ){
-          $new_balance = $row['acc'] - $amount;
+        if($row['acc'] > 0  ){
+          $new_balance = $row['acc'] + $amount;
 
           $sql = "UPDATE login SET acc = '$new_balance' WHERE email = '$email'";
           $result = mysqli_query($conn,$sql);
           $_SESSION['acc'] = $new_balance;
 
-          echo "Withdrawn";
+          echo "Account credited by '$amount' tk";
 
-          header("Refresh:1;url='../view/home.php'");
+          //header("Refresh:1;url='../view/home.php'");
         }
         else{
           echo "<br>";
-          echo "Insufficient amount";
+          echo "You entered less than 0";
         }
 
       }
