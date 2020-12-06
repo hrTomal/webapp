@@ -13,7 +13,7 @@
 			<p>
 				Turbo (Ryan Reynolds) is a speed-obsessed snail with an unusual dream: to become the world's greatest racer. This odd snail gets a chance to leave his slow-paced life behind when a freak accident gives him the power of superspeed.
 			</p>
-			<button onClick="#sec-c" class="btn">Read More</button>
+			<a href="#sec-c" class="btn">Gallery</a>
 			
 			</div>
 		</header>
