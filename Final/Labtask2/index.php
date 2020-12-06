@@ -13,6 +13,8 @@
 			<p>
 				Turbo (Ryan Reynolds) is a speed-obsessed snail with an unusual dream: to become the world's greatest racer. This odd snail gets a chance to leave his slow-paced life behind when a freak accident gives him the power of superspeed.
 			</p>
+			<button onClick="#sec-c" class="btn">Read More</button>
+			
 			</div>
 		</header>
 		<br>
@@ -37,6 +39,9 @@
 						<img src="views/turbo1.jpg" alt="Turbo">
 						<div class="card-content">
 							<h3 class="card-title">Turbo</h3>
+							<p>
+								This is one of the best movies of the decade, showing the emotion that comes with being a human, and the vulnerability of being a man.
+							</p>
 							
 						</div>
 					</div>
@@ -45,6 +50,9 @@
 					<div class="card">
 						<img src="views/turbo2.jpg" alt="Turbo">
 						<h3 class="card-title">Turbo</h3>
+						<p>
+							This is one of the best movies of the decade, showing the emotion that comes with being a human, and the vulnerability of being a man.
+						</p>
 						
 					</div>
 					
@@ -53,6 +61,9 @@
 					<div class="card">
 						<img src="views/turbo3.jpg" alt="Turbo">
 						<h3 class="card-title">Turbo</h3>
+						<p>
+							This is one of the best movies of the decade, showing the emotion that comes with being a human, and the vulnerability of being a man.
+						</p>
 						
 					</div>
 					
