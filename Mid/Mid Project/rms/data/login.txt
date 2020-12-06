@@ -1,0 +1,4 @@
+tomal,2222,x@y.z,666
+tomal,3333,d@f.g,666
+tomal,3333,d@f.g,555
+tomal,1111,xxx@yyy.com,777
