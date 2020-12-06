@@ -1,2 +1,0 @@
-ExpressWay,Dhaka,Khulna,Economy,9AM
-W,Dhaka,Khulna,Economy,12PM
