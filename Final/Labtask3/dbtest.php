@@ -10,13 +10,13 @@
   		background-color: white;
   		padding: 20px;
   		
-    	position: relative;
+    	position: absolute;
 	}
 	ol{
 		margin-left: 25%;
 		background-color: white;
 		border: 1px solid black;
-		position: relative;
+		position: absolute;
 	}
 	th,td{
 		border: 1px solid black;
