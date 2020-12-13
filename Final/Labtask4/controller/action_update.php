@@ -16,11 +16,51 @@
 
 	<h1 style="text-align: center;">Update Info</h1>
 
+	<script>
+			function validate() {
+				var idErr = document.getElementById('id').value;
+				var usernameErr = document.getElementById('username').value;
+				var passErr = document.getElementById('pass').value;
+				var emailErr = document.getElementById('email').value;
+				var dobErr = document.getElementById('dob').value;
+				console.log(idErr);
+
+				if($idErr == "") {
+					document.getElementById('errorMsg').innerHTML = "ID is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+				}
+				else if($usernameErr == "") {
+					document.getElementById('errorMsg').innerHTML = "username is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+				}
+				else if($passErr == "") {
+					document.getElementById('errorMsg').innerHTML = "password is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+				} 
+				else if($emailErr == "") {
+					document.getElementById('errorMsg').innerHTML = "Email is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+				} 
+				else if($dobErr == "") {
+					document.getElementById('errorMsg').innerHTML = "Date of birth is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+				} 
+				else{
+					return true;
+				} 			
+			}
+		</script>
+
 </head>
 
 <body style="background-color:#cccccc;">
 
-	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  onsubmit="return validate()" >
 
 		<label style="font-size:20px" border-style: groove;>ID: </label>
 		<input type="id" name="id" value="<?php echo $_GET['id'] ?>" readonly>

@@ -35,27 +35,27 @@
 				var dobErr = document.getElementById('dob').value;
 				console.log(idErr);
 
-				if(idErr == "") {
+				if($idErr == "") {
 					document.getElementById('errorMsg').innerHTML = "ID is empty";
 					document.getElementById('errorMsg').style.color = "red";
 					return false;	
 				}
-				else if(usernameErr == "") {
+				else if($usernameErr == "") {
 					document.getElementById('errorMsg').innerHTML = "username is empty";
 					document.getElementById('errorMsg').style.color = "red";
 					return false;	
 				}
-				else if(passErr == "") {
+				else if($passErr == "") {
 					document.getElementById('errorMsg').innerHTML = "password is empty";
 					document.getElementById('errorMsg').style.color = "red";
 					return false;	
 				} 
-				else if(emailErr == "") {
+				else if($emailErr == "") {
 					document.getElementById('errorMsg').innerHTML = "Email is empty";
 					document.getElementById('errorMsg').style.color = "red";
 					return false;	
 				} 
-				else if(dobErr == "") {
+				else if($dobErr == "") {
 					document.getElementById('errorMsg').innerHTML = "Date of birth is empty";
 					document.getElementById('errorMsg').style.color = "red";
 					return false;	
